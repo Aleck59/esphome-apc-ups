@@ -148,7 +148,7 @@ class ApcUps : public uart::UARTDevice, public PollingComponent {
  protected:
   static const size_t APC_UPS_READ_BUFFER_LENGTH = 110;  // maximum supported answer length
   static const size_t COMMAND_QUEUE_LENGTH = 10;
-  static const size_t COMMAND_TIMEOUT = 1000;
+  static const size_t COMMAND_TIMEOUT = 300;
   uint32_t last_poll_ = 0;
   void publish_state_(binary_sensor::BinarySensor *binary_sensor, const bool &state);
   void publish_state_(sensor::Sensor *sensor, float value);
